@@ -74,8 +74,6 @@
                   data-needle-circle-inner="false"
                   data-needle-side="left"
                   data-number-side="right"
-                  data-animation-duration="1500"
-                  data-animation-rule="linear"
                   data-bar-width="10"
                   data-value-int="2"
                   data-value-dec="1"
@@ -111,8 +109,6 @@
                   data-needle-circle-inner="false"
                   data-needle-side="left"
                   data-number-side="right"
-                  data-animation-duration="1500"
-                  data-animation-rule="linear"
                   data-bar-width="10"
                   data-bar-begin-circle="false"
                   data-value-int="2"
@@ -121,7 +117,7 @@
                   >
                 </canvas>
               </td>
-              <td align="center">
+              <td align="center" colspan="3">
                 <canvas data-type="radial-gauge"
                   data-title="Wind Direction"
                   data-color-title="#f5f5f5"
@@ -148,7 +144,6 @@
                   data-color-needle-circle-outer="#ccc"
                   data-needle-circle-size="15"
                   data-needle-circle-outer="false"
-                  data-animation-rule="linear"
                   data-needle-type="line"
                   data-needle-start="75"
                   data-needle-end="99"
@@ -165,30 +160,188 @@
                 ></canvas>
               </td>
             </tr>
+            <tr>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Wind Chill"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="°C"
+                  data-min-value="-10"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-max-value="50"
+                  data-major-ticks="-10,0,10,20,30,40,50"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $day.windchill.min.formatted, "to": $day.windchill.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.windchill.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Heat Index"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="°C"
+                  data-min-value="-10"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-max-value="50"
+                  data-major-ticks="-10,0,10,20,30,40,50"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $day.heatindex.min.formatted, "to": $day.heatindex.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.heatindex.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Dewpoint"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="°C"
+                  data-min-value="-10"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-max-value="50"
+                  data-major-ticks="-10,0,10,20,30,40,50"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $day.dewpoint.min.formatted, "to": $day.dewpoint.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.dewpoint.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Barometer"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mbar"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-min-value="800"
+                  data-max-value="1200"
+                  data-major-ticks="800,900,1000,1100,1200"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $day.barometer.min.formatted, "to": $day.barometer.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.barometer.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="humidity"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="%"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-min-value="0"
+                  data-max-value="100"
+                  data-major-ticks="0,20,40,60,80,100"
+                  data-minor-ticks="4"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $day.outHumidity.min.formatted, "to": $day.outHumidity.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(128, 128, 128)"
+                  data-color-needle-end="rgb(255, 255, 0)"
+                  data-bar-begin-circle="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.outHumidity.formatted"
+                  >
+                </canvas>
+              </td>
+            <tr>
           </table>
 
           <table>
             <tbody>
-              <tr>
-                <td class="stats_label">Wind Chill</td>
-                <td class="stats_data">$current.windchill</td>
-              </tr>
-              <tr>
-                <td class="stats_label">Heat Index</td>
-                <td class="stats_data">$current.heatindex</td>
-              </tr>
-              <tr>
-                <td class="stats_label">Dewpoint</td>
-                <td class="stats_data">$current.dewpoint</td>
-              </tr>
-              <tr>
-                <td class="stats_label">Humidity</td>
-                <td class="stats_data">$current.outHumidity</td>
-              </tr>
-              <tr>
-                <td class="stats_label">Barometer</td>
-                <td class="stats_data">$current.barometer</td>
-              </tr>
               <tr>
                 <td class="stats_label">Barometer Trend ($trend.time_delta.hour.format("%.0f"))</td>
                 <td class="stats_data">$trend.barometer</td>
@@ -231,46 +384,6 @@
           </div>
           <table>
             <tbody>
-              <tr>
-                <td class="stats_label">
-                  High Heat Index<br/>
-                  Low Wind Chill
-                </td>
-                <td class="stats_data">
-                  $day.heatindex.max at $day.heatindex.maxtime<br/>
-                  $day.windchill.min at $day.windchill.mintime
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label">
-                  High Humidity<br/>
-                  Low Humidity
-                </td>
-                <td class="stats_data">
-                  $day.outHumidity.max at $day.outHumidity.maxtime<br/>
-                  $day.outHumidity.min at $day.outHumidity.mintime
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label">
-                  High Dewpoint<br/>
-                  Low Dewpoint
-                </td>
-                <td class="stats_data">
-                  $day.dewpoint.max at $day.dewpoint.maxtime<br/>
-                  $day.dewpoint.min at $day.dewpoint.mintime
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label">
-                  High Barometer<br/>
-                  Low Barometer
-                </td>
-                <td class="stats_data">
-                  $day.barometer.max at $day.barometer.maxtime<br/>
-                  $day.barometer.min at $day.barometer.mintime
-                </td>
-              </tr>
               <tr>
                 <td class="stats_label">Today's Rain</td>
                 <td class="stats_data">$day.rain.sum</td>
