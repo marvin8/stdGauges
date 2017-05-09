@@ -13,6 +13,7 @@
     <title>$station.location Monthly weather summary</title>
     <link rel="stylesheet" type="text/css" href="weewx.css"/>
     <link rel="icon" type="image/png" href="favicon.ico" />
+    <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.4/all/gauge.min.js"><script> 
     <script type="text/javascript">
       function openURL(urlname)
       {
@@ -35,6 +36,302 @@
           <div class="stats_header">
             This Month
           </div>
+
+          <table>
+            <tr>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Temperature"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="°C"
+                  data-min-value="-10"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-max-value="50"
+                  data-major-ticks="-10,0,10,20,30,40,50"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $month.outTemp.min.formatted, "to": $month.outTemp.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.outTemp.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Wind Speed"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="m/s"
+                  data-min-value="0"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-max-value="15"
+                  data-major-ticks="0,5,10,15"
+                  data-minor-ticks="5"
+                  data-tick-side="right"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $month.windSpeed.min.formatted, "to": $month.windSpeed.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-needle="rgb(128, 128, 128)"
+                  data-color-needle-end="rgb(255, 255, 0)"
+                  data-color-plate="#fff"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-bar-begin-circle="false"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.windSpeed.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center" colspan="3">
+                <canvas data-type="radial-gauge"
+                  data-title="Wind Direction"
+                  data-color-title="#f5f5f5"
+                  data-font-title-weight="bold"
+                  data-width="300"
+                  data-height="300"
+                  data-min-value="0"
+                  data-max-value="360"
+                  data-major-ticks="N,NE,E,SE,S,SW,W,NW,N"
+                  data-minor-ticks="22"
+                  data-ticks-angle="360"
+                  data-start-angle="180"
+                  data-stroke-ticks="false"
+                  data-highlights="false"
+                  data-color-plate="#3a3"
+                  data-color-major-ticks="#f5f5f5"
+                  data-color-minor-ticks="#ddd"
+                  data-color-numbers="#ccc"
+                  data-color-needle="rgb(128, 128, 128)"
+                  data-color-needle-end="rgb(255, 255, 0)"
+                  data-value-box="false"
+                  data-value-text-shadow="false"
+                  data-color-circle-inner="#fff"
+                  data-color-needle-circle-outer="#ccc"
+                  data-needle-circle-size="15"
+                  data-needle-circle-outer="false"
+                  data-needle-type="line"
+                  data-needle-start="75"
+                  data-needle-end="99"
+                  data-needle-width="3"
+                  data-borders="true"
+                  data-border-inner-width="0"
+                  data-border-middle-width="0"
+                  data-border-outer-width="10"
+                  data-color-border-outer="#ccc"
+                  data-color-border-outer-end="#ccc"
+                  data-color-needle-shadow-down="#222"
+                  data-border-shadow-width="0"
+                  data-value="$current.windDir.formatted"
+                ></canvas>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Wind Chill"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="°C"
+                  data-min-value="-10"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-max-value="50"
+                  data-major-ticks="-10,0,10,20,30,40,50"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $month.windchill.min.formatted, "to": $month.windchill.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.windchill.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Heat Index"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="°C"
+                  data-min-value="-10"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-max-value="50"
+                  data-major-ticks="-10,0,10,20,30,40,50"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $month.heatindex.min.formatted, "to": $month.heatindex.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.heatindex.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Dewpoint"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="°C"
+                  data-min-value="-10"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-max-value="50"
+                  data-major-ticks="-10,0,10,20,30,40,50"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $month.dewpoint.min.formatted, "to": $month.dewpoint.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.dewpoint.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Barometer"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mbar"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-min-value="800"
+                  data-max-value="1200"
+                  data-major-ticks="800,900,1000,1100,1200"
+                  data-minor-ticks="5"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $month.barometer.min.formatted, "to": $month.barometer.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(255, 255, 255)"
+                  data-color-needle-end="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.barometer.formatted"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="humidity"
+                  data-color-title="rgb(0, 0, 0)"
+                  data-width="100"
+                  data-height="400"
+                  data-units="%"
+                  data-start-angle="90"
+                  data-ticks-angle="180"
+                  data-tick-side="right"
+                  data-min-value="0"
+                  data-max-value="100"
+                  data-major-ticks="0,20,40,60,80,100"
+                  data-minor-ticks="4"
+                  data-stroke-ticks="true"
+                  data-highlights='[ {"from": $month.outHumidity.min.formatted, "to": $month.outHumidity.max.formatted, "color": "rgba(200, 50, 50, .5)"} ]'
+                  data-color-plate="#fff"
+                  data-color-needle="rgb(128, 128, 128)"
+                  data-color-needle-end="rgb(255, 255, 0)"
+                  data-bar-begin-circle="false"
+                  data-border-shadow-width="0"
+                  data-borders="false"
+                  data-needle-type="arrow"
+                  data-needle-width="2"
+                  data-needle-circle-size="7"
+                  data-needle-circle-outer="true"
+                  data-needle-circle-inner="false"
+                  data-needle-side="left"
+                  data-number-side="right"
+                  data-bar-width="10"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-value="$current.outHumidity.formatted"
+                  >
+                </canvas>
+              </td>
+            <tr>
+          </table>
 
           <table>
             <tbody>
@@ -243,59 +540,6 @@
               </tr>
               <tr>
                 <td class="stats_label">
-                  High Dewpoint<br/>
-                  Low Dewpoint
-                </td>
-                <td class="stats_data">
-                  $year.dewpoint.max at $year.dewpoint.maxtime<br/>
-                  $year.dewpoint.min at $year.dewpoint.mintime
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label">
-                  High Barometer<br/>
-                  Low Barometer
-                </td>
-                <td class="stats_data">
-                  $year.barometer.max at $year.barometer.maxtime<br/>
-                  $year.barometer.min at $year.barometer.mintime
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label">
-                  Rain Total
-                </td>
-                <td class="stats_data">
-                  $year.rain.sum
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label"> 
-                  High Rain Rate
-                </td>
-                <td class="stats_data">
-                  $year.rainRate.max at $year.rainRate.maxtime
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label">
-                  High Wind Speed
-                </td>
-                <td class="stats_data">
-                  $year.wind.max from $year.wind.gustdir at $year.wind.maxtime
-                </td>
-              </tr>
-              <tr>
-                <td class="stats_label">
-                  Average Wind
-                </td>
-                <td class="stats_data">
-                  $year.wind.avg
-                </td>
-              </td>
-              
-              <tr>
-                <td class="stats_label">
                   RMS Wind
                 </td>
                 <td class="stats_data">
@@ -393,10 +637,24 @@
       </div> <!-- End id "content" -->
 
       <div id="navbar">
-        <input type="button" value="   Current   " onclick="openURL('index.html')" />
-        <input type="button" value="    Week     " onclick="openURL('week.html')" />
-        <input type="button" value="    Month    " onclick="openURL('month.html')" />
-        <input type="button" value="    Year     " onclick="openURL('year.html')" />
+        <p>
+          <a href="index.html">Current</a> || 
+          <a href="week.html">Week</a> ||
+          <a href="month.html">Month</a> ||
+          <a href="year.html">Year</a> 
+        </p>
+        
+        <p>Monthly summary:<br /> - 
+          #for $monthYear in $SummaryByMonth
+            <a href="NOAA/NOAA-$monthYear.txt">$monthYear</a> -
+          #end for
+        </pA
+  >
+        <p>Yearly summary:<br /> - 
+          #for $yr in $SummaryByYear
+            <a href="NOAA/NOAA-$yr.txt">$yr</a> -
+          #end for
+        </p>
       </div>
     </div> <!-- End id "container" -->
 
