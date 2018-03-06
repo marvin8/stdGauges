@@ -725,6 +725,22 @@
     </script>
     #end if
 
+<!-- Machine readable values
+  {mrv}Last Updated:$current.dateTime
+  {mrv}Current Temp:$current.outTemp.formatted
+  {mrv}High Temp:$day.outTemp.max.formatted
+  {mrv}Low Temp:$day.outTemp.min.formatted
+  {mrv}Heat Index:$current.heatindex.formatted
+  {mrv}Wind Dir:$current.windDir.ordinal_compass
+  {mrv}Wind Speed:$current.windSpeed.formatted
+  {mrv}Rain Today:$day.rain.sum.formatted
+  {mrv}Rain Week:$week.rain.sum.formatted
+  {mrv}Rain Month:$month.rain.sum.formatted
+  {mrv}Rain Year:$year.rain.sum.formatted
+  {mrv}Almanac Sunrise:$almanac.sunrise
+  {mrv}Almanac Sunset:$almanac.sunset
+  --!>
+
 </body>
 
 </html>
