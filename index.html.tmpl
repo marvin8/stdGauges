@@ -733,6 +733,11 @@
   {mrv}Heat Index:$current.heatindex.formatted
   {mrv}Wind Dir:$current.windDir.ordinal_compass
   {mrv}Wind Speed:$current.windSpeed.formatted
+  {mrv}Rain 1hr:$span($hour_delta=1).rain.sum.formatted
+  {mrv}Rain 3hr:$span($hour_delta=3).rain.sum.formatted
+  {mrv}Rain 12hr:$span($hour_delta=12).rain.sum.formatted
+  {mrv}Rain 24hr:$span($hour_delta=24).rain.sum.formatted
+  {mrv}Rain Hour:$hour.rain.sum.formatted
   {mrv}Rain Today:$day.rain.sum.formatted
   {mrv}Rain Week:$week.rain.sum.formatted
   {mrv}Rain Month:$month.rain.sum.formatted
