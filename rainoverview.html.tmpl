@@ -1,0 +1,339 @@
+#errorCatcher Echo
+##
+## Specifying an encoding of UTF-8 is usually safe, but if your text is 
+## actually in Latin-1, then you should replace the string "UTF-8" with "latin-1"
+## If you do this, you should also change the 'Content-Type' metadata below.
+#encoding UTF-8
+##
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://www.w3.org/2005/10/profile">
+    ## This choice should match the #encoding directive above
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>$station.location - Rain Overview</title>
+    <link rel="stylesheet" type="text/css" href="weewx.css"/>
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <script src="gauge.min.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="masthead">
+        <h1>$station.location</h1>
+        <h2>Rain Overview</h2>
+          <h2>$current.dateTime</h2>
+      </div>
+
+          <table>
+            <tr>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-max-value="$span($hour_delta=24).rain.sum.formatted"
+                  data-major-ticks="0,$span($hour_delta=24).rain.sum.formatted"
+                  data-value="$span($hour_delta=1).rain.sum.formatted"
+                  data-title="last 1 hr"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-max-value="$span($hour_delta=24).rain.sum.formatted"
+                  data-major-ticks="0,$span($hour_delta=24).rain.sum.formatted"
+                  data-value="$span($hour_delta=3).rain.sum.formatted"
+                  data-title="last 3 hr"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-max-value="$span($hour_delta=24).rain.sum.formatted"
+                  data-major-ticks="0,$span($hour_delta=24).rain.sum.formatted"
+                  data-value="$span($hour_delta=12).rain.sum.formatted"
+                  data-title="last 12 hr"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-max-value="$span($hour_delta=24).rain.sum.formatted"
+                  data-major-ticks="0,$span($hour_delta=24).rain.sum.formatted"
+                  data-value="$span($hour_delta=24).rain.sum.formatted"
+                  data-title="last 24 hr"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Current Hr"
+                  data-max-value="$year.rain.sum.formatted"
+                  data-major-ticks="0,$year.rain.sum.formatted"
+                  data-value="$hour.rain.sum.formatted"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Current Day"
+                  data-max-value="$year.rain.sum.formatted"
+                  data-major-ticks="0,$year.rain.sum.formatted"
+                  data-value="$day.rain.sum.formatted"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Current Week"
+                  data-max-value="$year.rain.sum.formatted"
+                  data-major-ticks="0,$year.rain.sum.formatted"
+                  data-value="$week.rain.sum.formatted"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Current Month"
+                  data-max-value="$year.rain.sum.formatted"
+                  data-major-ticks="0,$year.rain.sum.formatted"
+                  data-value="$month.rain.sum.formatted"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+              <td align="center">
+                <canvas data-type="linear-gauge"
+                  data-title="Current Year"
+                  data-max-value="$year.rain.sum.formatted"
+                  data-major-ticks="0,$year.rain.sum.formatted"
+                  data-value="$year.rain.sum.formatted"
+                  data-color-title="#000"
+                  data-width="100"
+                  data-height="400"
+                  data-units="mm"
+                  data-min-value="0"
+                  data-tick-side="right"
+                  data-minor-ticks="10"
+                  data-needle-side="right"
+                  data-number-side="right"
+                  data-value-int="2"
+                  data-value-dec="1"
+                  data-border-radius="20"
+                  data-borders="0"
+                  data-bar-begin-circle="false"
+                  data-color-needle="#000"
+                  data-color-bar="#77f"
+                  data-color-bar-end="#ddf"
+                  data-color-units="#00f"
+                  data-color-bar-progress="#77f"
+                  data-color-bar-progress-end="#00f"
+                  data-bar-stroke-width="2"
+                  data-value-box-border-radius="0"
+                  data-value-text-shadow="false"
+                  >
+                </canvas>
+              </td>
+            <tr>
+          </table>
+
+    </div>
+          <div id="content">
+        
+        <div class="header">
+          <h3>Rain Plots</h3>
+        </div>
+        <div id="plots">
+          <img src="dayrain.png" alt="rain" />
+          <img src="weekrain.png" alt="rain_week" />
+          <img src="monthrain.png" alt="rain_month" />
+          <img src="yearrain.png" alt="rain_yearh" />
+        </div>
+      </div> <!-- End id "content" -->
+
+
+</body>
+
+</html>
